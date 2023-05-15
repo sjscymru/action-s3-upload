@@ -12,4 +12,4 @@ if [[ $SINGLE_FILE == 'true' ]]
 fi
 
 # use AWS cli to do the work
-aws --region $INPUT_AWS_DEFAULT_REGION s3 $S3_CMD $DIST_LOCATION_CODE s3://$INPUT_AWS_BUCKET_NAME$INPUT_BUCKET_PATH --no-progress --delete
+aws --region $INPUT_AWS_DEFAULT_REGION s3 $S3_CMD $DIST_LOCATION_CODE s3://$INPUT_AWS_BUCKET_NAME$INPUT_BUCKET_PATH --no-progress 
