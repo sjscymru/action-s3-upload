@@ -21,7 +21,7 @@ inputs:
   BUCKET_PATH:
     description: "Additional path where the files will be uploaded '/pr/84'"
     required: false
-    default: ''
+    default: '/'
   DIST_LOCATION_CODE:
     description: "Location of the dist files. Default: dist."
     required: false
