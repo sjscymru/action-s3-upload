@@ -1,6 +1,6 @@
 # Deploy S3 Github Action 🚀
 
-Github action to deploy a folder to an Amazon S3 bucket. This project is a fork of the excellent work of
+Github action to deploy a folder, or a single file to an Amazon S3 bucket. This project is a fork of the excellent work of
 [lewandy/vue-s3-deployer](https://github.com/lewandy/vue-s3-deployer). The main differences are:
 
 * No build step included (so you can build the project with yarn or npm)
@@ -35,9 +35,10 @@ These settings are environment variables that the action will use for make the d
 | `AWS_ACCESS_KEY_ID` | AWS Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | **Yes** | N/A |
 | `AWS_SECRET_ACCESS_KEY` | AWS Secret Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) | **Yes** | N/A |
 | `AWS_BUCKET_NAME` | The name of the bucket you're syncing to. For example, `vue-action`. | **Yes** | N/A |
-| `BUCKET_PATH` | The region of the bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-
-| `AWS_DEFAULT_REGION` | The region of the bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-
-| `DIST_LOCATION_CODE` | Distribution files to be uploaded | **yes** | ./
+| `BUCKET_PATH` | The path within the bucket in which to upload the folder (or file). | No | '/'
+| `AWS_DEFAULT_REGION` | The region of the bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using- | **Yes** | N/A
+| `DIST_LOCATION_CODE` | Distribution files to be uploaded | **yes** |
+| `SINGLE_FILE` | Flag to indicate if the value of `DIST_LOCATION_CODE` points to a single file. This is used by the action to determine if the `cp` or `sync` command should be used on the AWS CLI tool. | No | false |./
 
 
 
