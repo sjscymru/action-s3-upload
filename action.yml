@@ -26,6 +26,10 @@ inputs:
     description: "Location of the dist files. Default: dist."
     required: false
     default: ./dist
+  SINGLE_FILE:
+    description: "Flag to indicate if DIST_LOCATION_CODE points to a single file"
+    required: false
+    default: false
 
 runs:
   using: "docker"
@@ -37,3 +41,4 @@ runs:
     AWS_BUCKET_NAME: ${{ inputs.AWS_BUCKET_NAME }}
     BUCKET_PATH: ${{ inputs.BUCKET_PATH }}
     DIST_LOCATION_CODE: ${{ inputs.DIST_LOCATION_CODE }}
+    SINGLE_FILE: ${{ inputs.SINGLE_FILE }}
